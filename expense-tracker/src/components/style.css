@@ -1,0 +1,32 @@
+.inc-exp-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .inc-exp-box {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    margin: 0 10px;
+    border: 2px solid #ddd; /* Light border around each box */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #fafafa; /* Light background color */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+  }
+  
+  .money {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .plus {
+    color: green;
+  }
+  
+  .minus {
+    color: red;
+  }
+  
+  
+  

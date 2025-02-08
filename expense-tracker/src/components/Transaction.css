@@ -1,0 +1,75 @@
+.plus {
+  color: green;
+}
+
+.minus {
+  color: red;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  list-style: none;
+  font-size: 18px;
+  margin-bottom: 10px;
+  position: relative; /* Ensure that pseudo-elements are positioned correctly */
+}
+
+.transaction-text {
+  flex-grow: 1;
+  font-weight: bold ;
+  padding-right: 100px; /* Adds spacing between text and amount */
+}
+
+.transaction-date {
+  margin-right: 1px; /* Adds spacing between date and amount */
+  font-size: 11px; /* Optional, adjust if needed */
+  color: #ff0077; /* Optional, change color for better contrast */
+}
+
+.transaction-amount {
+  padding: 0 10px; /* Adds horizontal padding to create space inside the amount box */
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 16px;
+  min-width: 60px;
+  text-align: center;
+  position: relative;
+}
+
+/* Add a full-height line effect on the extreme right of the transaction amount */
+.transaction-amount::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0; /* Position the line on the extreme right */
+  width: 6px; /* Width of the line */
+  height: 100%; /* Full height of the transaction box */
+  background-color: transparent;
+}
+
+/* For "plus" transactions, green line */
+.plus .transaction-amount::after {
+  background-color: green;
+}
+
+/* For "minus" transactions, red line */
+.minus .transaction-amount::after {
+  background-color: red;
+}
+
+/* Add a subtle background color to the transaction amount */
+.transaction-amount:hover {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+
+
+
